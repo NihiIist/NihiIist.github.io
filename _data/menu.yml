@@ -1,33 +1,22 @@
 # For documentation on this file, see:
 # https://github.com/riggraz/no-style-please#customize-the-menu
 
-#category: react, django, blockchain, thought
+#category: react, django, blockchain, thought, memo
 # yml syntax
 # https://lejewk.github.io/yaml-syntax/
 
 entries:
-  - title: info
-    entries:
-      - title: Oar Kim's website
-      - title: github repo
-        url: https://github.com/riggraz/no-style-please
-      - title: "keep in touch: <a href='mailto:chanyoung_kim@itargo.io'>email</a>"
-      - title: "skills: chat"
-      - title: "favorites: :soccer: :shirt: :movie_camera:"
-      - title: bio
-        url: bio
-
-  - title: tech 
+  - title: objects 
     entries:
       - title: react
         url: react-archive.html
       - title: django
         url: django-archive.html
-      - title: blockchainis
+      - title: blockchains
         url: blockchain-archive.html
       - title: others 
 
-  - title: recent 
+  - title: recents
     post_list:
       limit: 5
       show_more: true
@@ -41,6 +30,24 @@ entries:
       show_more: true
       show_more_text: thoughts...
       show_more_url: thoughts-archive.html
+
+  - title: miscellaneous
+    entries:
+      - title: x
+        url: memo.html
+      - title: "y"
+
+  - title: info
+    entries:
+      - title: Oar Kim's website
+      - title: github repo
+        url: https://github.com/NihiIist
+      - title: "keep in touch: <a href='mailto:chanyoung_kim@itargo.io'>email</a>"
+      - title: "skills: reactJS, django, solidity...junior"
+      - title: "favorites: :soccer: :shirt: :movie_camera:"
+      #- title: bio
+      #  url: bio
+
 
 #  - title: tech 
 #    entries:
