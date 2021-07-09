@@ -1,38 +1,68 @@
 # For documentation on this file, see:
 # https://github.com/riggraz/no-style-please#customize-the-menu
 
+#category: react, django, blockchain, thought
+# yml syntax
+# https://lejewk.github.io/yaml-syntax/
+
 entries:
   - title: info
     entries:
-      - title: a (nearly) no-CSS, fast, minimalist Jekyll theme.
+      - title: Oar Kim's website
       - title: github repo
         url: https://github.com/riggraz/no-style-please
-      - title: "used by <a href='https://riggraz.dev'>riggraz.dev</a> and <a href='https://github.com/riggraz/no-style-please/network/dependents'>many others</a>"
+      - title: "keep in touch: <a href='mailto:chanyoung_kim@itargo.io'>email</a>"
+      - title: "skills: chat"
+      - title: "favorites: :soccer: :shirt: :movie_camera:"
+      - title: bio
+        url: bio
 
-  - title: all posts
+  - title: tech 
+    entries:
+      - title: react
+        url: react-archive.html
+      - title: django
+        url: django-archive.html
+      - title: blockchainis
+        url: blockchain-archive.html
+      - title: others 
+
+  - title: recent 
     post_list:
       limit: 5
       show_more: true
-      show_more_text: See archive...
+      show_more_text: archive...
       show_more_url: archive.html
 
-  - title: posts by category
+  - title: thoughts 
     post_list:
-      category: example2
+      category: thought
+      limit: 3
       show_more: true
-      show_more_text: See more posts...
-      show_more_url: example2-archive.html
+      show_more_text: thoughts...
+      show_more_url: thoughts-archive.html
 
-  - title: rss
-    url: feed.xml
-  
-  - title: another list
-    entries:
-      - title: with subitems
-        entries:
-          - title: with subsubitems
-          - title: example page
-            url: about
-  - title: PRO TIP
-    entries:
-      - title: to edit this menu, edit _data/menu.yml file
+#  - title: tech 
+#    entries:
+#      - title: react
+#        post_list:
+#          category: example
+#          limit: 1
+#          show_more: true
+#          show_more_text: See more posts...
+#          show_more_url: example2-archive.html
+#      - title: css
+#        post_list:
+#          category: example2
+#          show_more: true
+#          show_more_text: more...
+#          show_more_url: about
+#
+#  - title: another list
+#    entries:
+#      - title: with subitems
+#        entries:
+#          - title: with subsubitems
+#          - title: example page
+#            url: about
+# ctrl + v...+ I...    just v...

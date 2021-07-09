@@ -1,4 +1,4 @@
-title: no style, please! # name of the site
+title: Nanos gigantum humeris insidentes # name of the site
 author: Oar Kim # name of site's author
 email: chanyoung_kim@itargo.io # email of site's author
 url: https://NihiIist.github.io # root address of the site
@@ -25,3 +25,4 @@ sass:
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
+  - jemoji
