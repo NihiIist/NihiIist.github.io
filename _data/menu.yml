@@ -36,6 +36,7 @@ entries:
       - title: x
         url: memo.html
       - title: "y"
+        url: note.html
 
   - title: info
     entries:
