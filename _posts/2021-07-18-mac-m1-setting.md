@@ -22,12 +22,35 @@ m1 mac bigsur에서 python 3.7을 지원하지 않음. 해당 python 버전만�
 
 - homebrew
     - apple silicon
+        - /opt/homebrew 에 설치됨(brew --prefix 명령어로 설치 위치 확인 가능)
+        > /bin/bash \-c "$(curl \-fsSL [https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh](https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh))"
+        - eval "$(/opt/homebrew/bin/brew shellenv)" 로 쉘에 brew관련 환경변수 적용(~/.zshrc에 추가)
     - intel
+        - /usr/local/homebrew 에 설치됨. rosetta2로 동작
+        > arch -x86_64 /bin/bash \-c "$(curl \-fsSL [https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh](https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh))"
+        - alias 적용
+        > alias ibrew='arch -x86_64 /usr/local/bin/brew'
 
-    https://wannabewize.tistory.com/189
+- python 3.7
+    - m1 bigsur에서 python3.7을 공식적으로 지원하지 않음
+    - intel homebrew로 설치(3.7.11) 
+    > ibrew install python@3.7
 
+- pyenv
+    - silicon으로 설치
+        > brew install pyenv
+    - pyenv는 PYENV_ROOT(default는 $HOME/.pyenv)안의 shims에 존재하는 python executable이 python, pip등의 python관련 명령어를 가로채는 방식으로 버전 관리
+    - 따라서 ~/.pyenv/shims가 PATH의 가장 앞에 위치하면 됨. pyenv 버전 관리에 오류가 있을 경우, 해당 사항부터 체크
+    - shims enable 명령어는 "pyenv init -" 하나로 충분함.
+        > echo 'eval "$(pyenv init -)"' >> ~/.zshrc
+    - python 3.7 버전관리를 위해 ~/.pyenv/versions 에 3.7.x폴더를 생성하고 /usr/local/lib 에 설치된 python@3.7.x로 symbolic link를 걸어준다. 
+    - 버전관리 확인
+        > pyenv local 3.7.x
 
-https://www.lainyzine.com/ko/article/how-to-install-homebrew-for-m1-apple-silicon/
+        > python3 -V, python -V
+    - 버전 적용이 올바르게 안 될 경우, .../python@3.7.x/bin 의 pip3, python3, python, pip 에 sym link 알맞게 걸어주어서 해결 
+
+- virtualenv
 
 
 ### 2. react-native
