@@ -15,6 +15,9 @@ title: "y"
 * remote 브랜치 갱신
 > git remote udpate
 
+* local git ignore
+    - .git/info/exclude 에 파일 추가
+
 # ant design
 * spin
     * spin으로 감싸도 component들 렌더링 됨. loading될 때까지 tip으로 가려주는 역할.
