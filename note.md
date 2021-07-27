@@ -17,6 +17,8 @@ title: "y"
 
 * local git ignore
     - .git/info/exclude 에 파일 추가
+    - git status로 확인했을 때, 적용안되면 git update-index --assume-unchanged 'file_name' 
+    - 위 명령어 적용 해제는 git update-index --no-assume-unchanged 'file_name'
 
 # ant design
 * spin
