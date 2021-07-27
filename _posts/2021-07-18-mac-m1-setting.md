@@ -58,12 +58,22 @@ apple silicon에서 rosetta를 사용하지 않고 react native를 빌드하는 
 * clean build
 - test
 
+- running on device
+    - usb연결 후, open .xcworkspace(CocoaPods쓸 경우)
+    - Targets > Signing & Capabilities 에서 Team 등록
+    - build 
+
 ---
 {: data-content="troubleshooting"}
 
-This article has been discussed here:
-- [lobste.rs](#)
-- [/r/webdev](#)
+- react-native running on device
+    - build할 때, Codesign wants to access key "access" in your keychain...팝업 창 뜰 경우
+        - KeyChain Access app에서 Cumstom Keychains > Apple Development key에 대한 password
+        - 별도로 설정하지 않았을 경우, password없음. password입력하지 않고 ok눌러서 진행
+    - errors were encountered while preparing your device for development. please check the devices and simulators window.
+        - iphone 재시동
+    - device(iphone)에서 신뢰할 수 없는 App개발자 팝업창 뜰 경우
+        - 설정 > 일반 > 기기관리 > 해당 App 신뢰함 터치
 
 Feel free to reach out at my email to leave feedback and talk about the article.
 
