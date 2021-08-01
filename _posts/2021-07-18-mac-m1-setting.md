@@ -66,6 +66,11 @@ apple silicon에서 rosetta를 사용하지 않고 react native를 빌드하는 
 ---
 {: data-content="troubleshooting"}
 
+- react-native build
+    - undefined symbol ... for arm64(swift관련 library 에러)
+        - xcode build settings > Search Paths > Library Search Paths 모두 삭제
+    - react-vector-icons error
+        - build phases 에서 Copy Bundle Resources 모두 삭제 
 - react-native running on device
     - build할 때, Codesign wants to access key "access" in your keychain...팝업 창 뜰 경우
         - KeyChain Access app에서 Cumstom Keychains > Apple Development key에 대한 password
