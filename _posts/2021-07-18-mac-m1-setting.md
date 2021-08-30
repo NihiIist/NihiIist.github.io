@@ -71,6 +71,12 @@ apple silicon에서 rosetta를 사용하지 않고 react native를 빌드하는 
         - xcode build settings > Search Paths > Library Search Paths 모두 삭제
     - react-vector-icons error
         - build phases 에서 Copy Bundle Resources 모두 삭제 
+
+    - cocoapod link관련 에러(async socket...)
+        - xcode Library Search Paths 삭제할 때, project(최상단)에 대해서만 진행해야 하는데 하위 target의 Library Search Paths를 제거해서 발생
+        - project에서는 삭제. target에서는 $inherit(건드리지 않아야 함)
+    - no bundle url present....js 관련 에러
+        - node_modules 삭제 후, yarn install. yarn restart --reset-cache
 - react-native running on device
     - build할 때, Codesign wants to access key "access" in your keychain...팝업 창 뜰 경우
         - KeyChain Access app에서 Cumstom Keychains > Apple Development key에 대한 password
@@ -80,7 +86,11 @@ apple silicon에서 rosetta를 사용하지 않고 react native를 빌드하는 
     - device(iphone)에서 신뢰할 수 없는 App개발자 팝업창 뜰 경우
         - 설정 > 일반 > 기기관리 > 해당 App 신뢰함 터치
 
-Feel free to reach out at my email to leave feedback and talk about the article.
+- react-native debugger
+     - https://github.com/mglukhovsky/react-devtools-components-blank 
+     - https://gist.github.com/bvaughn/4bc90775530873fdf8e7ade4a039e579
+     - https://github.com/jhen0409/react-native-debugger/blob/master/docs/react-devtools-integration.md
+
 
 ---
 {: data-content="footnotes"}
